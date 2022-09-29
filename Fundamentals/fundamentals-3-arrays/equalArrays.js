@@ -18,7 +18,7 @@ function equalArrays (firstArray, secondArray){
     for (let i = 0; i<firstArray.length; i++){
         if (firstArray[i] != secondArray[i]){
             areEqual = false;
-            index = i+1;
+            index = i;
             break;
         }
     }
