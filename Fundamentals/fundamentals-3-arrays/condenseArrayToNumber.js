@@ -7,9 +7,12 @@ function condense (numbers){
         return;
     }
     for (let z = 0; z<length-1; z++){
+
         for (let i = 0; i<length-1 ; i++){
-        //sum+= numbers[i] + numbers[i+1];
+        
+
         for (let j = 0; j <length-1-i; j++){
+
             sum+= numbers[j] + numbers[j+1]
         }
         length--;
@@ -19,4 +22,4 @@ function condense (numbers){
   }
   console.log(sum)
   }
-condense([1])
+condense([-2,-10,-3])
