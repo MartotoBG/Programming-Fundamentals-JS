@@ -1,4 +1,4 @@
-  function condense (numbers){
+function condense (numbers){
     // syberi otdelnite elementi
     let length = numbers.length;
     let sum = 0;
@@ -19,4 +19,4 @@
   }
   console.log(sum)
   }
-  condense ([0,0,1,-1])
+condense([1])
