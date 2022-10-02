@@ -10,4 +10,4 @@ function magicSum (numbers, sum){
     }
 }
 
-magicSum ([2,2,2,4,4,4], 6)
+magicSum ([2,2,2,4,4,4], 7)
