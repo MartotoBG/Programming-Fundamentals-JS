@@ -16,7 +16,7 @@ function commandsForGames(commands) {
             case 'Install':
 
                 for (let j = 0; j < gamesArrayLength; j++) {
-                    if (array[i] == gamesArray[j]) {
+                    if (array[1] == gamesArray[j]) {
                         installed = true;
                         break;
                     }
@@ -32,11 +32,11 @@ function commandsForGames(commands) {
             case 'Uninstall':
 
                 for (let j = 0; j < gamesArrayLength; j++) {
-                    if (array[i] == gamesArray[j]) {
+                    if (array[1] == gamesArray[j]) {
                         installed = true;
                     }
-                    else if (installed == true) {
-                        gamesArray.splice(i, 1);
+                    if (installed == true) {
+                        gamesArray.splice(j, 1);
                         break;
                     }
 
@@ -103,4 +103,4 @@ function commandsForGames(commands) {
 
 commandsForGames([
 
-    'Spiderman CS WoW Diablo EuroTruck', 'Install LoL', 'Uninstall WoW', 'Update Diablo', 'Expansion CS-Go', 'Play!']);
+    'Spiderman CS WoW Diablo EuroTruck', 'Install LoL', 'Uninstall WoW', 'Update Diablo', 'Expansion CS-Go', 'Install Spiderman','Install MinecraftPro', 'Play!']);
