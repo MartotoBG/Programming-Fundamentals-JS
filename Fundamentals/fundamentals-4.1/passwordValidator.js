@@ -18,7 +18,7 @@ function validator (password){
     }
 
     for (let j = 0; j<length; j++){
-        if (password[j].charCodeAt()>=48 && password[j].charCodeAt()<57){
+        if (password[j].charCodeAt()>=48 && password[j].charCodeAt()<=57){
             digits++;
         }
     }
