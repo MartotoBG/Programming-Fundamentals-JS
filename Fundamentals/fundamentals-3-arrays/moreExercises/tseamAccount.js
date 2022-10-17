@@ -10,7 +10,7 @@ function commandsForGames(commands) {
     for (let i= 1; i<length;i++){
         array = commands[i].split(` `);
 
-        switch(array[i]){
+        switch(array[i-1]){
             case 'Install':
             
             for (let j = 0; j < gamesArrayLength; j++) {
