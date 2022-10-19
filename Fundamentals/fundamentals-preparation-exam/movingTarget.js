@@ -1,5 +1,5 @@
 function moving(array) {
-    let targets = array.shift().split(` `);
+    let targets = array.shift().split(` `).map(x => Number(x));
     let i = 0;
     let command = array[i];
     let length = targets.length;
@@ -8,7 +8,7 @@ function moving(array) {
         let commandAsArray = command.split(` `);
         switch (commandAsArray[0]) {
             case "Shoot":
-                if (commandAsArray[1] < length) {
+                if (commandAsArray[1] <= length) {
                     let power = Number(commandAsArray[2]);
                     targets[commandAsArray[1]] = Number(targets[commandAsArray[1]]);
                     targets[commandAsArray[1]] -= Number(power);
@@ -17,10 +17,10 @@ function moving(array) {
                     targets.splice(commandAsArray[1],1);
                 }; break;
              
-            case "Add" : if (commandAsArray[1]<length){
+            case "Add" : if (commandAsArray[1]<length && commandAsArray[1]>=0){
                 let value = Number(commandAsArray[2]);
                 targets[commandAsArray[1]] = Number(targets[commandAsArray[1]]);
-                targets[commandAsArray[1]] += Number(value);
+                targets.splice(commandAsArray[1],0,value);
             }
             else {
                 console.log(`Invalid placement!`);
@@ -45,7 +45,7 @@ function moving(array) {
 
     }
     console.log(targets.join(`|`))
-
+}
     //console.log(targets)
 
 
@@ -66,16 +66,10 @@ function moving(array) {
     // Remove the target at the given index and the ones before and after it depending on the radius.
 
     // If any of the indices in the range is invalid, print: "Strike missed!" and skip this command.
-}
 
-moving((["52 74 23 44 96 110 10 20",
 
-    "Strike 2 1",
+moving(["1 2 3 4 500",
 
-    "Shoot 1 80",
+"Shoot 4 15",
 
-    "Strike 2 1",
-
-    "Add 22 3",
-
-    "End"]))
+"End"])
