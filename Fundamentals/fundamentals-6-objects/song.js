@@ -1,5 +1,5 @@
 function createSong (array) {
-    let zero = 0;
+    
     class Song {
         constructor(type,name,time){
             this.type = type;
