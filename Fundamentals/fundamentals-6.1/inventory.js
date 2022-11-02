@@ -1,31 +1,23 @@
-function inventory (array){
+function inventory (list){
 
-    let fighters = [];
-    
-    array.forEach(fighter => {
-        fighter= fighter.split(` / `);
-        let name = fighter.shift();
-        let level = fighter.shift();
-        let items = fighter.slice(0);
-        fighters.name = name;
-        fighters.level = level;
-        fighters.items = items
-        
-        
+    let heroes = [];
 
+    list.forEach(line => {
+        let [name,level,items] = line.split(` / `);
+        let currentHero = {
+            name: name,
+            level: Number(level),
+            items: items,
+        }
+        heroes.push(currentHero)
     });
+    heroes.sort((a,b) => a.level - b.level);
     
-    fighters.forEach(fighter => {
-        console.log(`Hero: ${fighter.name}`);
-        console.log(`level => ${fighter.level}`);
-        console.log(`Items => ${fighter.items}`)
+    heroes.forEach((hero) => {
+        console.log(`Hero: ${hero.name}`)
+        console.log(`level => ${hero.level}`)
+        console.log(`items => ${hero.items}`)
     })
-    // fighters.forEach(element => {
-    //     console.log(`Hero: ${gladiator.name}`);
-    //     console.log(`level => ${gladiator.level}`);
-    //     console.log(`Items => ${gladiator.items}`)
-    // })
-
 
     //Hero: {heroName}
 
