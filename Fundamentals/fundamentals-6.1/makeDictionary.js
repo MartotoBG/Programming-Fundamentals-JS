@@ -22,9 +22,11 @@ function dictionary(array) {
         }
     });
     const terms = [];
+    
     for (let i = 0 ; i<words.length; i++){
         terms.push(new Term (words[i],definitions[i]));
     }
+    
     terms.sort((a,b) => a.word.localeCompare(b.word));
     terms.forEach(element =>{
         console.log(`Term: ${element.word} => Definition: ${element.definition}`);

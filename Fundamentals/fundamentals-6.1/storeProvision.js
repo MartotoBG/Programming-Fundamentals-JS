@@ -9,6 +9,7 @@ function store (current, ordered){
             }
         }
     }
+    
     for (let i = 0; i< current.length; i+=2){
     let currentObject = {
         product: current[i],
