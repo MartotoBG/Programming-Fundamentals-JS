@@ -4,7 +4,7 @@ function movies(list) {
     list.forEach(line => {
         if (line.includes(`addMovie `)) {
             let name = line.split(`addMovie `)[1];
-            movies.push({ name })
+            movies.push({ name:name })
         }
         else if (line.includes(`directedBy`)) {
             let [name, director] = line.split(` directedBy `);
