@@ -1,4 +1,4 @@
-function filter(array) {
+function validation(array) {
     let newArray = [];
     let index = 0;
     let items = [];
@@ -22,12 +22,14 @@ function filter(array) {
             }
         }
         console.log('Bought furniture:');
+        if (items.length>0){
         console.log(items.join('\n'));
+        }
         console.log(`Total money spend: ${totalMoney.toFixed(2)}`)
     
 }
 
-filter(['>>Sofa<<312.23!3',
+validation(['>>Sofa<<312.23!3',
 
     '>>TV<<300!5',
 
