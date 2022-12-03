@@ -14,9 +14,7 @@ function mark (string){
         
     }
     console.log(`Destinations: ${words.join(', ')}`);
-    console.log(`Travel Points: ${points}`)
-    
-    
+    console.log(`Travel Points: ${points}`);   
 }
 
 mark ("=Hawai=/Cyprus/=Invalid/invalid==i5valid=/I5valid/=i=")
