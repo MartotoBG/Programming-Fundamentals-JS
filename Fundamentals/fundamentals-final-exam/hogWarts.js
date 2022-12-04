@@ -30,7 +30,7 @@ function hog(array) {
                 let oldLetter = spell[index];
                 if (spell[index]){
                 spell = spell.replace(oldLetter,letter);
-                console.log('Done');
+                console.log('Done!');
                 }
                 else {
                     console.log('The spell was too weak.');
@@ -44,7 +44,7 @@ function hog(array) {
                     let isDone = false;
                     while (isDone !== true){
                         if (spell.includes(firstSubstring)){
-                            spell.replace(firstSubstring,secondSubstring);
+                            spell = spell.replace(firstSubstring,secondSubstring);
                         }
                         else {
                             isDone = true;
@@ -79,5 +79,7 @@ hog(["TR1GG3R",
 "Necromancy",
 "Illusion 8 m",
 "Illusion 9 n",
+'Divination 3 s',
+'Alteration gg',
 "Abracadabra"])
 
