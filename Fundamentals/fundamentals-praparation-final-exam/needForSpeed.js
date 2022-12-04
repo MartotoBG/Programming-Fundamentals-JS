@@ -42,7 +42,7 @@ function speed (array){
                 if (carsObject[name].fuel+refuel >maxTank){
                     const difference = carsObject[name].fuel+refuel - maxTank;
                     carsObject[name].fuel = maxTank;
-                    console.log(`${name} refueled with ${refuel-difference}} liters`);
+                    console.log(`${name} refueled with ${refuel-difference} liters`);
                 }   
                 else {
                     carsObject[name].fuel += refuel;
