@@ -34,3 +34,5 @@ function solve (age){
 
 // · In all other cases print – "out of bounds";
 }
+
+solve(20)
